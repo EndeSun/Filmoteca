@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Filmoteca</string>
+    <string name="author">Creado por Ende Sun</string>
+    <string name="ir">IR AL SITIO WEB</string>
+    <string name="support">OBTENER SOPORTE</string>
+    <string name="back">VOLVER</string>
+    <string name="message">Funcionalidad 1 sin implementar</string>
+</resources>
+

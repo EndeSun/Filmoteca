@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Filmoteca</string>
+    <string name="app_name" translatable="false">Filmoteca</string>
+    <string name="author">made by Ende Sun</string>
+    <string name="ir">go to the website</string>
+    <string name="support">help</string>
+    <string name="back">return</string>
+    <string name="message">function 1 without implement</string>
 </resources>
