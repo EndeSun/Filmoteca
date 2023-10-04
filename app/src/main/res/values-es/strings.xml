@@ -21,5 +21,8 @@
     <string name="watchFilmA">Película A</string>
     <string name="watchFilmB">Película B</string>
     <string name="watchRelatedFilm">Película Relacionada</string>
+
+    <string name="filmEdited">Película editada</string>
+    <string name="filmCancel">Película cancelada</string>
 </resources>
 

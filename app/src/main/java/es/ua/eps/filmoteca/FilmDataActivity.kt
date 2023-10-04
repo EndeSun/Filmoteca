@@ -1,18 +1,21 @@
 package es.ua.eps.filmoteca
 
-import android.app.Instrumentation.ActivityResult
+import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
-import androidx.activity.result.contract.ActivityResultContract
+import android.widget.TextView
+import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import es.ua.eps.filmoteca.databinding.ActivityFilmDataBinding
 
 
-
-
-
 class FilmDataActivity : AppCompatActivity() {
+
+    private val MOVIE_RESULT=123
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityFilmDataBinding.inflate(layoutInflater)
@@ -41,37 +44,39 @@ class FilmDataActivity : AppCompatActivity() {
         //Cuando se le enviá al film edit
         binding.filmEdit.setOnClickListener {
             val filmEditIntent = Intent(this@FilmDataActivity, FilmEditActivity::class.java)
-
-
-            private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-                ActivityResult -> onActivityResult(MOVIE_RESULT, result.resultCode, result.data)
-            }
-
-            val intent = Intent(this@FilmDataActivity, FilmEditActivity::class.java)
-            if(Build.VERSION.SDK.INT >= 30) {
-                startForResult.launch(intent)
+            if(Build.VERSION.SDK_INT >= 30) {
+                startForResult.launch(filmEditIntent)
             }
             else {
                 @Suppress("DEPRECATION")
-                startActivityForResult(intent, MOVIE_RESULT)
+                startActivityForResult(filmEditIntent, MOVIE_RESULT)
             }
-
-            override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-                @Suppress("DEPRECATION")
-                super.onActivityResult(requestCode, resultCode, data)
-                ...
-            }
-
-
-
-            startActivity(filmEditIntent)
-            //startActivityFor(filmEditIntent)
         }
 
         binding.backToHome.setOnClickListener {
             val backToHomeIntent = Intent(this@FilmDataActivity, FilmListActivity::class.java)
             backToHomeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(backToHomeIntent)
+        }
+    }
+
+    private val startForResult =
+        registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+                onActivityResult(MOVIE_RESULT, result.resultCode, result.data)
+            }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        @Suppress("DEPRECATION")
+        super.onActivityResult(requestCode, resultCode, data)
+        val filmData = findViewById<TextView>(R.id.filmData)
+        if(requestCode == MOVIE_RESULT){
+            if (resultCode == Activity.RESULT_OK){
+                filmData.text = getString(R.string.filmEdited)
+            }
+            else if(resultCode == Activity.RESULT_CANCELED){
+                filmData.text = getString(R.string.filmCancel)
+            }
         }
     }
 }
