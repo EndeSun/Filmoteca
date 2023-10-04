@@ -4,84 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AboutActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="154dp"
         android:layout_height="41dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="24dp"
         android:text="@string/author"
+        android:textAlignment="center"
         app:drawableTint="#C85858"
         app:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/goBack"
+        android:layout_width="200dp"
+        android:layout_height="57dp"
         android:layout_marginStart="151dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="151dp"
         android:layout_marginBottom="88dp"
-        android:onClick="onFuncionalidadClick"
+        android:onClick="onFunctionalismClick"
         android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/goSupport"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/goSupport"
         android:layout_width="199dp"
         android:layout_height="49dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="96dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="onFuncionalidadClick"
+        android:onClick="onFunctionalismClick"
         android:text="@string/support"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/goWeb" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/goWeb"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
         android:layout_marginStart="118dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="118dp"
         android:layout_marginBottom="184dp"
-        android:onClick="onFuncionalidadClick"
         android:text="@string/ir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="215dp"
-        android:layout_height="558dp"
+        android:layout_width="258dp"
+        android:layout_height="335dp"
         android:layout_marginEnd="57dp"
         android:layout_marginBottom="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/goBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712"
+        app:layout_constraintVertical_bias="0.795"
+        android:contentDescription="@string/coche"
         app:srcCompat="@drawable/coche" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

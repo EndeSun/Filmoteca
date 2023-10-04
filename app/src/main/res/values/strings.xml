@@ -5,4 +5,20 @@
     <string name="support">help</string>
     <string name="back">return</string>
     <string name="message">function 1 without implement</string>
+    <string name="coche">Car image</string>
+    <string name="filmA">Watch film A</string>
+    <string name="filmB">Watch film B</string>
+    <string name="about">About</string>
+
+    <string name="filmData">INFORMATION OF THE FILM</string>
+    <string name="relatedFilm">Watch related movie</string>
+    <string name="filmEdit">Edit movie</string>
+    <string name="backToHome">Return to main</string>
+    <string name="filmEditing">Editing movie</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="watchFilmA">Movie A</string>
+    <string name="watchFilmB">Movie B</string>
+    <string name="watchRelatedFilm">Related Film</string>
 </resources>

@@ -5,5 +5,21 @@
     <string name="support">OBTENER SOPORTE</string>
     <string name="back">VOLVER</string>
     <string name="message">Funcionalidad 1 sin implementar</string>
+    <string name="coche">Imagen de coche</string>
+    <string name="filmA">Ver película A</string>
+    <string name="filmB">Ver película B</string>
+    <string name="about">Acerca de</string>
+
+    <string name="filmData">DATOS DE LA PELÍCULA</string>
+    <string name="relatedFilm">Ver película relacionada</string>
+    <string name="filmEdit">Editar película</string>
+    <string name="backToHome">Volver a la principal</string>
+    <string name="filmEditing">Editando película</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="watchFilmA">Película A</string>
+    <string name="watchFilmB">Película B</string>
+    <string name="watchRelatedFilm">Película Relacionada</string>
 </resources>
 

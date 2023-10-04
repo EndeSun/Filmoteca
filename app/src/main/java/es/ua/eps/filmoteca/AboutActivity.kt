@@ -1,13 +1,13 @@
 package es.ua.eps.filmoteca
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-//import android.widget.Button
-//import android.widget.TextView
-// import android.widget.Button
 import android.widget.Toast
 import es.ua.eps.filmoteca.databinding.ActivityAboutBinding
+
 
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +15,29 @@ class AboutActivity : AppCompatActivity() {
 
         val binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.goWeb.setOnClickListener{
+            val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/"))
+            if(webIntent.resolveActivity(packageManager) != null){
+                startActivity(webIntent)
+            }
+        }
+
+        binding.goSupport.setOnClickListener{
+            val supportIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:1195562121ende@gmail.com"))
+            if(supportIntent.resolveActivity(packageManager) != null){
+                startActivity(supportIntent)
+            }
+        }
+
+        binding.goBack.setOnClickListener {
+            finish()
+        }
+
+
     }
 
-    fun onFuncionalidadClick(view: View){
+    fun onFunctionalismClick(view: View){
         // val button = findViewById<Button>(R.id.button3) así se toma una referencia de los componentes de la actividad para importar alt + enter
 
         mostrarToast(getString(R.string.message))
